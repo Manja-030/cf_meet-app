@@ -19,9 +19,9 @@ THEN the user should see a list of cities (suggestions) that match what they’v
 
 **Scenario 3: User can select a city from the suggested list.**  
 GIVEN the user was typing “Berlin” in the city textbox  
-And the list of suggested cities is showing  
+And the list of suggested cities is showing
 WHEN the user selects a city (e.g., “Berlin, Germany”) from the list  
-THEN their city should be changed to that city (i.e., “Berlin, Germany”)
+THEN their city should be changed to that city (i.e., “Berlin, Germany”) and the list of suggestions should disappear and the user should receive a list of upcoming events in that city.
 
 ## FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
 
