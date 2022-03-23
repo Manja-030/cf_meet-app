@@ -89,12 +89,6 @@ describe('<Event /> component', () => {
     expect(detailElement.find('.description')).toHaveLength(1);
   });
 
-  test('render p for event description in details', () => {
-    EventWrapper.setState({ collapsed: false });
-    const detailElement = EventWrapper.find('.details');
-    expect(detailElement.find('.description')).toHaveLength(1);
-  });
-
   test('render event description in details', () => {
     EventWrapper.setState({ collapsed: false });
     const detailElement = EventWrapper.find('.details');
