@@ -10,7 +10,6 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
-    numberOfEvents: 10,
   };
 
   componentDidMount() {
@@ -45,10 +44,7 @@ class App extends Component {
           locations={this.state.locations}
           updateEvents={this.updateEvents}
         />
-        <EventList
-          events={this.state.events}
-          numberOfEvents={this.state.numberOfEvents}
-        />
+        <EventList events={this.state.events} />
         <NumberOfEvents />
       </div>
     );
