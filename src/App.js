@@ -10,13 +10,17 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
+    number: 1,
   };
 
   componentDidMount() {
     this.mounted = true;
     getEvents().then((events) => {
       if (this.mounted) {
-        this.setState({ events, locations: extractLocations(events) });
+        this.setState({
+          events,
+          locations: extractLocations(events),
+        });
       }
     });
   }
@@ -30,11 +34,17 @@ class App extends Component {
       const locationEvents =
         location === 'all'
           ? events
-          : events.filter((event) => event.location === location);
+          : events
+              .filter((event) => event.location === location)
+              .slice(0, this.state.number);
       this.setState({
         events: locationEvents,
       });
     });
+  };
+
+  updateNumber = (value) => {
+    this.setState({ number: value });
   };
 
   render() {
@@ -44,8 +54,11 @@ class App extends Component {
           locations={this.state.locations}
           updateEvents={this.updateEvents}
         />
-        <EventList events={this.state.events} />
-        <NumberOfEvents />
+        <EventList events={this.state.events} number={this.state.number} />
+        <NumberOfEvents
+          number={this.state.number}
+          updateNumber={this.updateNumber}
+        />
       </div>
     );
   }

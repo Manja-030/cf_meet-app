@@ -70,4 +70,50 @@ describe('<App /> integration', () => {
     expect(AppWrapper.state('events')).toEqual(allEvents);
     AppWrapper.unmount();
   });
+
+  test('App passes "number" state as a prop to EventList', () => {
+    const AppWrapper = mount(<App />);
+    const AppNumberState = AppWrapper.state('number');
+    expect(AppNumberState).not.toEqual(undefined);
+    expect(AppWrapper.find(EventList).props().number).toEqual(AppNumberState);
+    AppWrapper.unmount();
+  });
+
+  test('App passes "number" state as a prop to NumberOfEvents', () => {
+    const AppWrapper = mount(<App />);
+    const AppNumberState = AppWrapper.state('number');
+    expect(AppNumberState).not.toEqual(undefined);
+    expect(AppWrapper.find(NumberOfEvents).props().number).toEqual(
+      AppNumberState
+    );
+    AppWrapper.unmount();
+  });
+
+  /*test('render the default number of events', async () => {
+    const AppWrapper = await mount(<App />);
+    AppWrapper.setState({ events: mockData });
+    const AppNumberState = AppWrapper.state('number');
+    expect(AppWrapper.find('.EventList li')).toHaveLength(AppNumberState);
+    AppWrapper.unmount();
+  });*/
+
+  test('update number input field after user input', async () => {
+    const AppWrapper = await mount(<App />);
+    const numberField = AppWrapper.find('.number');
+    const eventObject = { target: { value: 3 } };
+    numberField.simulate('change', eventObject);
+    expect(AppWrapper.state('number')).toBe(eventObject.target.value);
+    AppWrapper.unmount();
+  });
+
+  test('render number of events depending on user input', async () => {
+    const AppWrapper = await mount(<App />);
+    AppWrapper.setState({ events: mockData });
+    const eventObject = { target: { value: 1 } };
+    AppWrapper.find('.number').simulate('change', eventObject);
+    expect(AppWrapper.find('.EventList li')).toHaveLength(
+      AppWrapper.state('number')
+    );
+    AppWrapper.unmount();
+  });
 });
