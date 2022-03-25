@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
-    number: 1,
+    number: 10,
   };
 
   componentDidMount() {
@@ -33,7 +33,7 @@ class App extends Component {
     getEvents().then((events) => {
       const locationEvents =
         location === 'all'
-          ? events
+          ? events.slice(0, this.state.number)
           : events
               .filter((event) => event.location === location)
               .slice(0, this.state.number);
