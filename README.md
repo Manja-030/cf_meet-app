@@ -28,9 +28,9 @@ THEN their city should be changed to that city (i.e., “Berlin, Germany”) and
 ### As a user I want to be able to to show and hide event details so I can easily switch between getting an overview and getting more information about a particular event.
 
 **Scenario 1: An event element is collapsed by default**  
-GIVEN upcoming events where fetched
-WHEN the user opens the meet app  
-THEN the user will see a list of the events each with a "show details" button
+GIVEN the app was closed
+WHEN the user opens the app  
+THEN the user will see a list of events each with the details collapsed
 
 **Scenario 2: User can expand an event to see its details**  
 GIVEN there is a list of upcoming events  
