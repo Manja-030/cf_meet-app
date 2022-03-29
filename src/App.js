@@ -11,6 +11,7 @@ class App extends Component {
     events: [],
     locations: [],
     number: 10,
+    location: 'all',
   };
 
   componentDidMount() {
@@ -18,7 +19,7 @@ class App extends Component {
     getEvents().then((events) => {
       if (this.mounted) {
         this.setState({
-          events,
+          events: events.slice(0, this.state.number),
           locations: extractLocations(events),
         });
       }
@@ -29,22 +30,29 @@ class App extends Component {
     this.mounted = false;
   }
 
-  updateEvents = (location) => {
+  updateEvents = (location, eventCount = this.state.number) => {
     getEvents().then((events) => {
       const locationEvents =
         location === 'all'
-          ? events.slice(0, this.state.number)
-          : events
-              .filter((event) => event.location === location)
-              .slice(0, this.state.number);
-      this.setState({
-        events: locationEvents,
-      });
+          ? events
+          : events.filter((event) => event.location === location);
+      const eventNumberFilter =
+        eventCount > locationEvents.length
+          ? locationEvents
+          : locationEvents.slice(0, eventCount);
+      if (this.mounted) {
+        this.setState({
+          events: eventNumberFilter,
+        });
+      }
     });
   };
 
-  updateNumber = (value) => {
-    this.setState({ number: value });
+  updateNumber = (number) => {
+    this.setState(
+      { number: number },
+      this.updateEvents(this.state.location, number)
+    );
   };
 
   render() {
