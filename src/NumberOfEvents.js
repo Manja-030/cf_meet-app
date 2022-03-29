@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 
 class NumberOfEvents extends Component {
+  state = { number: 10 };
+
+  updateNumber = (event) => {
+    this.setState({ number: event.target.value });
+    this.props.updateNumber(event.target.value);
+  };
+
   render() {
     return (
       <div className="NumberOfEvents">
-        <label className="number-label">
-          Number of Events:
-          <input
-            type="number"
-            className="number"
-            defaultValue={this.props.number}
-            onChange={(e) => this.props.updateNumber(e.target.value)}
-          />
-        </label>
+        <label className="number-label">Number of Events</label>
+        <input
+          type="number"
+          className="number"
+          value={this.state.number}
+          onChange={this.updateNumber}
+        />
       </div>
     );
   }
