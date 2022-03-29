@@ -4,7 +4,11 @@ import NumberOfEvents from '../NumberOfEvents';
 
 describe('<NumberOfEvents /> component', () => {
   let NumberOfEventsWrapper;
-  NumberOfEventsWrapper = shallow(<NumberOfEvents />);
+  beforeAll(() => {
+    NumberOfEventsWrapper = shallow(
+      <NumberOfEvents updateEventNumbers={() => {}} />
+    );
+  });
 
   test('render number input', () => {
     expect(NumberOfEventsWrapper.find('.number')).toHaveLength(1);
@@ -15,8 +19,7 @@ describe('<NumberOfEvents /> component', () => {
   });
 
   test('render default number', () => {
-    const number = NumberOfEventsWrapper.props.numberOfEvents;
-    expect(NumberOfEventsWrapper.find('.number').props().value).toBe(number);
+    expect(NumberOfEventsWrapper.state('number')).toBe(10);
   });
 
   /*test('change state when input changes', () => {
