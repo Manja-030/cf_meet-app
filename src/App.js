@@ -5,6 +5,7 @@ import './nprogress.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import { Row, Col } from 'react-bootstrap';
 
 class App extends Component {
   state = {
@@ -58,14 +59,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CitySearch
-          locations={this.state.locations}
-          updateEvents={this.updateEvents}
-        />
-        <NumberOfEvents
-          number={this.state.number}
-          updateNumber={this.updateNumber}
-        />
+        <div className="number-city-container">
+          <NumberOfEvents
+            number={this.state.number}
+            updateNumber={this.updateNumber}
+          />
+          <CitySearch
+            locations={this.state.locations}
+            updateEvents={this.updateEvents}
+          />
+        </div>
+
         <EventList events={this.state.events} number={this.state.number} />
       </div>
     );
