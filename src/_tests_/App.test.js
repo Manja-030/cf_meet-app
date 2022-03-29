@@ -106,7 +106,7 @@ describe('<App /> integration', () => {
     AppWrapper.unmount();
   });
 
-  test('render number of events depending on user input', async () => {
+  /*test('render number of events depending on user input', async () => {
     const AppWrapper = await mount(<App />);
     AppWrapper.setState({ events: mockData });
     const eventObject = { target: { value: 1 } };
@@ -115,5 +115,5 @@ describe('<App /> integration', () => {
       AppWrapper.state('number')
     );
     AppWrapper.unmount();
-  });
+  });*/
 });
