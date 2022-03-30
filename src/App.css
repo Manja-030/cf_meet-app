@@ -51,12 +51,9 @@ input[type="number"] {
  ul{
    list-style: none;
  }
-  
 
 .suggestions {
   width: 250px;
-  position: relative;
-  z-index: 3;
   /*align-self: center;*/
   margin: 0;
   top: 2px;
@@ -106,14 +103,13 @@ p {
   display: grid;
   list-style: none;
   grid-template-columns: 1fr;
- 
   margin: 0px;
   padding: 10px;
   justify-content: space-evenly;
   grid-gap: 20px;
   /*background-color: #204051;*/
 }
-.event-text{
+.event-text {
   background-color: #204051 !important;
 }
 .event {
@@ -130,7 +126,10 @@ p {
   font-size: smaller;
 }
 
-  
+ #time-icon, #location-icon{
+  background-color: #204051 !important;
+ } 
+ 
 
 
 .card-body{
