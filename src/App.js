@@ -5,7 +5,6 @@ import './nprogress.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { Row, Col } from 'react-bootstrap';
 
 class App extends Component {
   state = {
