@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getEvents, extractLocations } from './api';
 import './App.css';
 import './nprogress.css';
+import meet_logo2 from './assets/meet_logo2.jpg';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
@@ -58,6 +59,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="header">
+          <img
+            src={meet_logo2}
+            className="meet-logo responsive"
+            alt="meet-logo"
+          ></img>
+        </div>
+        <div className="welcome-message">
+          <p>Welcome to my meet app!</p>
+          <p>Find web development events near you and meet other students.</p>
+        </div>
         <div className="number-city-container">
           <NumberOfEvents
             number={this.state.number}
