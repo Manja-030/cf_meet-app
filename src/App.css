@@ -145,6 +145,13 @@ p {
   border-radius: 4px;
   /*grid-column: 0 / span 1;*/
 }
+.calendar-link{
+  background-color: #204051;
+  color: #FABB51;
+ 
+
+}
+
 .description{
   font-size: smaller;
 }
@@ -153,7 +160,6 @@ p {
   background-color: #204051 !important;
  } 
  
-
 
 .card-body{
   margin: 5px;
