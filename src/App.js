@@ -7,7 +7,6 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { InfoAlert } from './Alert';
-import { BsWifiOff } from 'react-icons/bs';
 import WelcomeScreen from './WelcomeScreen';
 
 class App extends Component {
