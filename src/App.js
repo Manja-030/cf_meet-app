@@ -6,6 +6,8 @@ import meet_logo2 from './assets/meet_logo2.jpg';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import { InfoAlert } from './Alert';
+import { BsWifiOff } from 'react-icons/bs';
 
 class App extends Component {
   state = {
@@ -69,6 +71,13 @@ class App extends Component {
         <div className="welcome-message">
           <p>Welcome to my meet app!</p>
           <p>Find web development events near you and meet other students.</p>
+        </div>
+        <div className="offline-warning">
+          {!navigator.onLine ? (
+            <InfoAlert text="You are offline, the event list might not be up to date." />
+          ) : (
+            ''
+          )}
         </div>
         <div className="number-city-container">
           <NumberOfEvents

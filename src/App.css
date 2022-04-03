@@ -26,7 +26,10 @@ App{
   font-size: 1.4rem;
   font-weight: bold;
 }
-
+.offline-warning{
+  text-align:center;
+  margin-top: 1.5rem;
+}
 
 .number-city-container{
   padding-top: 60px;
