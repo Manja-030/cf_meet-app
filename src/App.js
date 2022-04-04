@@ -49,7 +49,9 @@ class App extends Component {
           : events.filter((event) => event.location === location);
       const eventNumberFilter =
         eventCount > locationEvents.length
-          ? locationEvents
+          ? locationEvents.length > 48
+            ? locationEvents.slice(0, 48)
+            : locationEvents
           : locationEvents.slice(0, eventCount);
       if (this.mounted) {
         this.setState({
