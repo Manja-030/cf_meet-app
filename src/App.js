@@ -60,6 +60,7 @@ class App extends Component {
       const city = location.split(', ').shift();
       return { city, number };
     });
+    console.log('Hello ScatterChart');
     return data;
   };
 
@@ -127,12 +128,17 @@ class App extends Component {
         <div className="data-vis-wrapper">
           <h4>Events in each city</h4>
           <EventGenre events={this.state.events} />
-          <ResponsiveContainer height={400}>
+          <ResponsiveContainer height={300}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid strokeDashArray="3 3" />
               <XAxis type="category" dataKey="city" name="city" />
-              <YAxis type="category" dataKey="number" name="number of events" />
-              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <YAxis
+                type="category"
+                dataKey="number"
+                name="number of events"
+                allowDecimals={false}
+              />
+              <Tooltip cursor={{ strokeDashArray: '3 3' }} />
               <Scatter data={this.getData()} fill="#8884d8" />
             </ScatterChart>
           </ResponsiveContainer>
