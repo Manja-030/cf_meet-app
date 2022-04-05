@@ -130,15 +130,15 @@ class App extends Component {
           <EventGenre events={this.state.events} />
           <ResponsiveContainer height={300}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
-              <CartesianGrid strokeDashArray="3 3" />
+              <CartesianGrid strokeDasharray="3 3" />
               <XAxis type="category" dataKey="city" name="city" />
               <YAxis
-                type="category"
+                type="number"
                 dataKey="number"
                 name="number of events"
                 allowDecimals={false}
               />
-              <Tooltip cursor={{ strokeDashArray: '3 3' }} />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
               <Scatter data={this.getData()} fill="#8884d8" />
             </ScatterChart>
           </ResponsiveContainer>
