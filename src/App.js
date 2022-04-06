@@ -55,7 +55,7 @@ class App extends Component {
       const chartNumber = events.filter(
         (event) => event.location === location
       ).length;
-      const city = location.split(', ').split('- ').shift();
+      const city = location.split(', ').shift();
       return { city, chartNumber };
     });
     console.log(data);
