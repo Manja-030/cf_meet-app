@@ -26,6 +26,7 @@ class App extends Component {
     number: 12,
     location: 'all',
     showWelcomeScreen: undefined,
+    errorText: '',
   };
 
   async componentDidMount() {
@@ -39,57 +40,60 @@ class App extends Component {
       getEvents().then((events) => {
         if (this.mounted) {
           this.setState({
-            events: events.slice(0, this.state.number),
+            events: events,
             locations: extractLocations(events),
           });
         }
       });
     }
   }
+  getData = () => {
+    const { locations, events } = this.state;
+    console.log(locations);
+    console.log(events);
+    const data = locations.map((location) => {
+      const chartNumber = events.filter(
+        (event) => event.location === location
+      ).length;
+      const city = location.split(', ').shift();
+      return { city, chartNumber };
+    });
+    console.log(data);
+    return data;
+  };
 
   componentWillUnmount() {
     this.mounted = false;
   }
 
-  getData = () => {
-    const { locations, events } = this.state;
-    const data = locations.map((location) => {
-      const number = events.filter(
-        (event) => event.location === location
-      ).length;
-      const city = location.split(', ').shift();
-      return { city, number };
-    });
-    console.log('Hello ScatterChart');
-    return data;
-  };
-
-  updateEvents = (location, eventCount = this.state.number) => {
+  updateEvents = (location) => {
     getEvents().then((events) => {
       const locationEvents =
         location === 'all'
           ? events
           : events.filter((event) => event.location === location);
-      const eventNumberFilter =
-        eventCount > locationEvents.length
-          ? locationEvents.length > 48
-            ? locationEvents.slice(0, 48)
-            : locationEvents
-          : locationEvents.slice(0, eventCount);
 
       if (this.mounted) {
         this.setState({
-          events: eventNumberFilter,
+          events: locationEvents,
         });
       }
     });
   };
 
   updateNumber = (number) => {
-    this.setState(
-      { number: number },
-      this.updateEvents(this.state.location, number)
-    );
+    let numberWarning = ' ';
+    if (number < 0) {
+      numberWarning =
+        'Number can not be negative. Please enter the number of events you want to have displayed.';
+    } else if (number > this.state.events.length) {
+      numberWarning = `There are only $(this.state.events.length) events.`;
+      this.setState({ number: this.state.events.length });
+    } else if (number > 48) {
+      numberWarning = `To reduce loading time, only 48 events are displayed.`;
+      this.setState({ number: 48 });
+    }
+    this.setState({ errorText: numberWarning });
   };
 
   render() {
@@ -119,6 +123,7 @@ class App extends Component {
           <NumberOfEvents
             number={this.state.number}
             updateNumber={this.updateNumber}
+            errorText={this.state.errorText}
           />
           <CitySearch
             locations={this.state.locations}
@@ -134,7 +139,7 @@ class App extends Component {
               <XAxis type="category" dataKey="city" name="city" />
               <YAxis
                 type="number"
-                dataKey="number"
+                dataKey="chartNumber"
                 name="number of events"
                 allowDecimals={false}
               />

@@ -3,11 +3,18 @@ import Event from './Event';
 
 class EventList extends Component {
   render() {
-    const { events } = this.props;
+    const { events, number } = this.props;
+    const eventNumberFilter = events.filter((index) => {
+      if (events.length > 48) {
+        return index < 48;
+      } else {
+        return index < number;
+      }
+    });
 
     return (
       <ul className="EventList">
-        {events.map((event) => (
+        {eventNumberFilter.map((event) => (
           <li key={event.id}>
             <Event event={event} />
           </li>
