@@ -292,6 +292,11 @@ p {
   font-family: "Roboto";
 }
 
+.recharts-default-tooltip {
+  padding: 5px;
+  background-color: #E4E3E3;
+  border: 1px solid #204051;
+}
 
 
 @media only screen and (min-width: 992px) {
