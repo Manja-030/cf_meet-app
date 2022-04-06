@@ -47,10 +47,9 @@ class App extends Component {
       });
     }
   }
+
   getData = () => {
     const { locations, events } = this.state;
-    console.log(locations);
-    console.log(events);
     const data = locations.map((location) => {
       const chartNumber = events.filter(
         (event) => event.location === location
@@ -82,16 +81,13 @@ class App extends Component {
   };
 
   updateNumber = (number) => {
-    let numberWarning = ' ';
+    let numberWarning = '';
     if (number < 0) {
-      numberWarning =
-        'Number can not be negative. Please enter the number of events you want to have displayed.';
+      numberWarning = 'Number can not be negative.';
     } else if (number > this.state.events.length) {
       numberWarning = `There are only $(this.state.events.length) events.`;
-      this.setState({ number: this.state.events.length });
-    } else if (number > 48) {
-      numberWarning = `To reduce loading time, only 48 events are displayed.`;
-      this.setState({ number: 48 });
+    } else {
+      this.setState({ number: number });
     }
     this.setState({ errorText: numberWarning });
   };
@@ -148,7 +144,7 @@ class App extends Component {
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-
+        <p> Hello</p>
         <EventList events={this.state.events} number={this.state.number} />
         <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
