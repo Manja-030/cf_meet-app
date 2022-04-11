@@ -144,7 +144,6 @@ class App extends Component {
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-        <p> Hello</p>
         <EventList events={this.state.events} number={this.state.number} />
         <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
