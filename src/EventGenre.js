@@ -4,7 +4,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 const EventGenre = ({ events }) => {
   const [data, setData] = useState([]);
 
-  const COLORS = ['#204051', '#84A9AC', '#FABB51', '#FAEDC6', '#3B6978'];
+  const COLORS = ['#204051', '#84A9AC', '#FABB51', '#3B6978', '#C74B50'];
 
   useEffect(() => {
     const getData = () => {
