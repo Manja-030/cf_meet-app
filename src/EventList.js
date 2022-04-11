@@ -9,7 +9,6 @@ class EventList extends Component {
     });
     return (
       <div>
-        <p>Hello</p>
         <ul className="EventList">
           {numberFilter.map((event) => {
             return (

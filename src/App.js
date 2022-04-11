@@ -105,7 +105,7 @@ class App extends Component {
           ></img>
         </div>
         <div className="welcome-message">
-          <p>Welcome to my meet app!</p>
+          <p>Let's meet!</p>
           <p>Find web development events near you and meet other students.</p>
         </div>
         <div className="offline-warning">
@@ -127,7 +127,7 @@ class App extends Component {
           />
         </div>
         <div className="data-vis-wrapper">
-          <h4>Events in each city</h4>
+          <h3>Events in each city</h3>
           <EventGenre events={this.state.events} />
           <ResponsiveContainer height={300}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
