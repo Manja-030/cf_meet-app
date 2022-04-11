@@ -3,9 +3,8 @@ import Event from './Event';
 
 class EventList extends Component {
   render() {
-    const { events, number } = this.props;
-    const eventNumberFilter = events.filter((index) => {
-      return index < number;
+    const eventNumberFilter = this.props.events.filter((index) => {
+      return index < this.props.number;
     });
 
     return (
