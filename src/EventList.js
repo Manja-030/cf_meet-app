@@ -9,15 +9,18 @@ class EventList extends Component {
     });
 
     return (
-      <ul className="EventList">
-        {eventNumberFilter.map((event) => {
-          return (
-            <li key={event.id}>
-              <Event event={event} />
-            </li>
-          );
-        })}
-      </ul>
+      <div>
+        <p>Hello</p>
+        <ul className="EventList">
+          {eventNumberFilter.map((event) => {
+            return (
+              <li key={event.id}>
+                <Event event={event} />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     );
   }
 }
