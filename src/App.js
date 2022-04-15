@@ -85,7 +85,7 @@ class App extends Component {
     if (number < 0) {
       numberWarning = 'Number can not be negative.';
     } else if (number > this.state.events.length) {
-      numberWarning = `There are only $(this.state.events.length) events.`;
+      numberWarning = `There are only ${this.state.events.length} events.`;
     } else {
       this.setState({ number: number });
     }
