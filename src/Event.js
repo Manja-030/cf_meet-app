@@ -15,6 +15,9 @@ class Event extends Component {
     const { collapsed } = this.state;
     return (
       <div className="event">
+        <div className="summary-wrapper">
+          <h2 className="summary event-text">{event.summary}</h2>
+        </div>
         <p className="start-time event-text">
           <BsAlarm id="time-icon" />{' '}
           {moment(event.start.dateTime).format('MMMM Do YYYY, h:mm a')}
@@ -22,9 +25,7 @@ class Event extends Component {
         <p className="event-location event-text">
           <GoLocation id="location-icon" /> {event.location}
         </p>
-        <div className="summary-wrapper">
-          <h2 className="summary event-text">{event.summary}</h2>
-        </div>
+
         <button className="details-btn" onClick={this.handleClick}>
           {collapsed ? 'show details' : 'hide details'}
         </button>
