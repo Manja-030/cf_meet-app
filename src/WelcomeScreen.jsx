@@ -30,7 +30,7 @@ function WelcomeScreen(props) {
           </div>
         </div>
         <a
-          href="https://manja-030.github.io/cf_meet-app/privacy.html"
+          href="https://Manja-030.github.io/cf_meet-app/privacy.html"
           rel="nofollow noopener"
         >
           Privacy policy
