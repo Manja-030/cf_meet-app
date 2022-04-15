@@ -15,7 +15,9 @@ class Event extends Component {
     const { collapsed } = this.state;
     return (
       <div className="event">
-        <h2 className="summary event-text">{event.summary}</h2>
+        <div className="summary-wrapper">
+          <h2 className="summary event-text">{event.summary}</h2>
+        </div>
         <p className="start-time event-text">
           <BsAlarm id="time-icon" />{' '}
           {moment(event.start.dateTime).format('MMMM Do YYYY, h:mm a')}

@@ -133,7 +133,7 @@ p {
   grid-gap: 20px;
   /*background-color: #204051;*/
 }
-.summary {
+.summary-wrapper {
   height: 3em;
 }
 .event-text {
