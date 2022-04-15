@@ -135,7 +135,6 @@ p {
   /*background-color: #204051;*/
 }
 .summary-wrapper {
-  height: 3em;
   background-color: #204051;
 }
 .event-text {
@@ -294,7 +293,7 @@ p {
 }
 
 
-@media only screen and (min-width: 321px) and (max-width: 768px) {
+@media only screen and (min-width: 425px) and (max-width: 768px) {
   .EventList {
     grid-template-columns: 1fr 1fr;
   }
@@ -302,7 +301,7 @@ p {
 		flex-direction: row;
 	}
   .summary-wrapper {
-    height: auto;
+    height: 3em;
   }
  
 }
@@ -315,7 +314,7 @@ p {
 		flex-direction: row;
 	}
   .summary-wrapper {
-    height: auto;
+    height: 3em;
   }
 } 
 /*
