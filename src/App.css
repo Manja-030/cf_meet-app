@@ -231,13 +231,13 @@ p {
   justify-content: space-evenly;
   /*min-width: 100%;*/
 }
-.recharts-responsive-container {
+/*.recharts-responsive-container {
   min-width: 100%;
   display: flex;
 }
 .recharts-surface {
   overflow: visible;
-}
+}*/
 
 
 .login-button {
