@@ -166,8 +166,7 @@ p {
 .description{
   font-size: smaller;
 }
-
-.start-time{
+.time-location{
   margin-top: 3px;
 }
 
@@ -228,11 +227,15 @@ p {
   margin-bottom: 0.8rem;
 }
 
+.data-vis-title{
+  text-align: center;
+  color: #204051;
+}
 .data-vis-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   /*min-width: 100%;*/
 }
 /*.recharts-responsive-container {
