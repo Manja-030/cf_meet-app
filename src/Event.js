@@ -18,13 +18,15 @@ class Event extends Component {
         <div className="summary-wrapper">
           <h2 className="summary event-text">{event.summary}</h2>
         </div>
-        <p className="start-time event-text">
-          <BsAlarm id="time-icon" />{' '}
-          {moment(event.start.dateTime).format('MMMM Do YYYY, h:mm a')}
-        </p>
-        <p className="event-location event-text">
-          <GoLocation id="location-icon" /> {event.location}
-        </p>
+        <div className="time-location">
+          <p className="start-time event-text">
+            <BsAlarm id="time-icon" />{' '}
+            {moment(event.start.dateTime).format('MMMM Do YYYY, h:mm a')}
+          </p>
+          <p className="event-location event-text">
+            <GoLocation id="location-icon" /> {event.location}
+          </p>
+        </div>
 
         <button className="details-btn" onClick={this.handleClick}>
           {collapsed ? 'show details' : 'hide details'}
