@@ -168,6 +168,7 @@ p {
 }
 .time-location{
   margin-top: 3px;
+  background-color: #204051;
 }
 
  #time-icon, #location-icon{
