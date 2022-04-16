@@ -31,7 +31,7 @@
   margin-top: 1.5rem;
 }
 
-.number-city-container{
+.number-city-wrapper{
   padding-top: 20px;
 	margin-left: 30px;
 	margin-right: 30px;
@@ -81,11 +81,12 @@ input[type="number"] {
 
 .suggestions {
   width: 250px;
-  /*align-self: center;*/
   margin: 0;
   top: 2px;
   font-size: 1.2rem;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  z-index: 1;
 }
 
 .suggestions li {
@@ -166,8 +167,8 @@ p {
 .description{
   font-size: smaller;
 }
-.time-location{
-  margin-top: 3px;
+.time-location-wrapper{
+  margin-top: 3 px;
   background-color: #204051;
 }
 

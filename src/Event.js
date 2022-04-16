@@ -18,7 +18,7 @@ class Event extends Component {
         <div className="summary-wrapper">
           <h2 className="summary event-text">{event.summary}</h2>
         </div>
-        <div className="time-location">
+        <div className="time-location-wrapper">
           <p className="start-time event-text">
             <BsAlarm id="time-icon" />{' '}
             {moment(event.start.dateTime).format('MMMM Do YYYY, h:mm a')}

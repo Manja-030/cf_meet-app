@@ -116,7 +116,7 @@ class App extends Component {
             ''
           )}
         </div>
-        <div className="number-city-container">
+        <div className="number-city-wrapper">
           <NumberOfEvents
             number={this.state.number}
             updateNumber={this.updateNumber}
