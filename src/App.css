@@ -1,18 +1,34 @@
+/* -- GENERAL -- */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+:root {
+  --color-1: #204051;
+  --color-2: #E4E3E3;
+  --color-3: #3B6978;
+  --color-4: #84A9AC;
+  --color-5: #bcdcdb;
+  --color-6: #FABB51;
+  
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: #E4E3E3
+  background-color: var(--color-2);
 }
 
 /*App{
   width: 100%;
   height: 100%;
 }*/
+
+
+/* -- HEADING -- */
 .header{
   width: 100%;
-  background-color: #204051;
+  background-color: var(--color-1);
 }
 .meet-logo{
   display: block;
@@ -20,16 +36,14 @@
   max-width: 100%;
 }
 .welcome-message{
-  color: #204051;
+  color: var(--color-1);
   text-align: center;
   margin-top: 1.5rem;
   font-size: 1.4rem;
   font-weight: bold;
 }
-.offline-warning{
-  text-align:center;
-  margin-top: 1.5rem;
-}
+
+/* -- Search SECTION --  */
 
 .number-city-wrapper{
   padding-top: 20px;
@@ -38,8 +52,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: center; 
 }
 
 .CitySearch {
@@ -52,7 +65,11 @@
   /*margin: auto;*/
   padding: 10px;
   /*text-align: center;*/
- 
+}
+
+.city-input {
+  width: 250px;
+  color: var(--color-1);
 }
 
 .NumberOfEvents {
@@ -92,7 +109,7 @@ input[type="number"] {
 .suggestions li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #84A9AC;
+  background-color: var(--color-4);
   cursor: default;
 }
 
@@ -103,135 +120,14 @@ input[type="number"] {
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: var(--color-5);
 }
 
-
-p {
-  margin: 5px 0;
-}
-
-.display-none {
-  display: none;
-}
-.showSuggestions {
-  display: block;
-}
-
-.city {
-  width: 250px;
-}
-
-
-.city-search-text{
-  color: #204051;
-}
-
-.EventList {
-  display: grid;
-  list-style: none;
-  grid-template-columns: 1fr;
-  margin: 0px;
-  padding: 10px;
-  justify-content: space-evenly;
-  grid-gap: 20px;
-  /*background-color: #204051;*/
-}
-.summary-wrapper {
-  background-color: #204051;
-}
-
-.summary{
-  white-space: pre-wrap;
-}
-.event-text {
-  background-color: #204051 !important;
-}
-.event {
-  /*margin: 15px;*/
-  /*height: 90%;*/
-  padding: 15px;
-  background-color: #204051 !important;
-   /*color: #E4E3E3;*/
-  color: white;
-  border-radius: 4px;
-  /*grid-column: 0 / span 1;*/
-}
-.calendar-link{
-  background-color: #204051;
-  color: #FABB51;
- 
-
-}
-
-.description{
-  font-size: smaller;
-}
-.time-location-wrapper{
-  margin-top: 3 px;
-  background-color: #204051;
-}
-
- #time-icon, #location-icon{
-  background-color: #204051 !important;
- } 
- 
-
-.card-body{
-  margin: 5px;
-}
-
-
-.details-btn {
-  right: 5px;
-  bottom: 5px;
-  padding: 5px 8px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #84A9AC;
-  color: white;
-  border-color: #3B6978;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.name {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.group-name {
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-.going,
-.visibility {
-  font-style: italic;
-}
-
-.description {
-  overflow-x: hidden;
-}
-
-.button-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-  font-family: sans-serif;
-}
-
-.Alert {
-  /*position: fixed;
-  top: 20px;*/
-  height: 1rem;
-  margin-bottom: 0.8rem;
-}
+/* -- DATA VISUALIZATION SECTION -- */
 
 .data-vis-title{
   text-align: center;
-  color: #204051;
+  color: var(--color-1);
 }
 .data-vis-wrapper {
   display: flex;
@@ -248,64 +144,98 @@ p {
   overflow: visible;
 }
 
-
-.login-button {
-  color: #494949;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #ffffff;
-  padding: 20px;
-  border: 4px solid #494949;
-  display: inline-block;
-  transition: all 0.4s ease 0s;
-  min-width: 10rem;
-  margin: 1rem;
-}
-
-.google-btn {
-  width: 184px;
-  height: 42px;
-  margin: 1rem;
-  background-color: #4285f4;
-  border-radius: 2px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
-}
-.google-btn:hover {
-  box-shadow: 0 0 6px #4285f4;
-}
-.google-btn:active {
-  background: #1669f2;
-}
-.google-icon-wrapper {
-  position: absolute;
-  margin-top: 1px;
-  margin-left: 1px;
-  width: 40px;
-  height: 40px;
-  border-radius: 2px;
-  background-color: #fff;
-}
-.google-icon {
-  position: absolute;
-  margin-top: 11px;
-  margin-left: -8px;
-  width: 18px;
-  height: 18px;
-}
-.btn-text {
-  float: right;
-  margin: 11px 11px 0 0;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  font-family: "Roboto";
-}
-
 .recharts-default-tooltip {
   padding: 5px;
-  background-color: #E4E3E3;
-  border: 1px solid #204051;
+  background-color: var(--color-2);
+  border: 1px solid var(--color-1);
 }
+
+/* -- EVENT LIST -- */
+
+.EventList {
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr;
+  margin: 0px;
+  padding: 10px;
+  justify-content: space-evenly;
+  grid-gap: 20px;
+  /*background-color: #204051;*/
+}
+
+.event {
+  /*margin: 15px;*/
+  /*height: 90%;*/
+  padding: 15px;
+  background-color: var(--color-1) !important;
+   /*color: #E4E3E3;*/
+  color: white;
+  border-radius: 4px;
+  /*grid-column: 0 / span 1;*/
+}
+
+p {
+  margin: 5px 0;
+}
+
+.summary-wrapper {
+  background-color: var(--color-1);
+}
+
+.summary{
+  white-space: pre-wrap;
+}
+.event-text {
+  background-color: var(--color-1) !important;
+}
+
+.details-btn {
+  right: 5px;
+  bottom: 5px;
+  padding: 5px 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--color-4);
+  color: white;
+  border-color: var(--color-3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar-link{
+  background-color: var(--color-1);
+  color: var(--color-6);
+}
+
+.description{
+  font-size: smaller;
+  overflow-x: hidden;
+}
+
+.time-location-wrapper{
+  margin-top: 3 px;
+  background-color: var(--color-1);
+}
+
+ #time-icon, #location-icon{
+  background-color: var(--color-1) !important;
+ } 
+
+/* -- ALERTS -- */
+
+.Alert {
+  /*position: fixed;
+  top: 20px;*/
+  height: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.offline-warning{
+  text-align:center;
+  margin-top: 1.5rem;
+}
+
+/* -- MEDIA QUERIES -- */
 
 
 @media only screen and (min-width: 425px) and (max-width: 768px) {
@@ -356,3 +286,43 @@ p {
     margin: 0 auto;
   }
 }*/
+
+/* Reste-Rampe */
+
+
+.display-none {
+  display: none;
+}
+.showSuggestions {
+  display: block;
+}
+
+.card-body{
+  margin: 5px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.group-name {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.going,
+.visibility {
+  font-style: italic;
+}
+
+.button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+
+

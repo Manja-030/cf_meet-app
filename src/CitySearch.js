@@ -43,7 +43,7 @@ class CitySearch extends Component {
         <label className="city-search-label">Search for a City:</label>
         <input
           type="text"
-          className="city"
+          className="city-input"
           value={this.state.query}
           placeholder="City"
           onChange={this.handleInputChanged}
