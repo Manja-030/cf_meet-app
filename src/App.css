@@ -158,8 +158,8 @@ input[type="number"] {
   background-color: var(--color-2);
   border: 1px solid var(--color-1);
 }
-.recharts-layer{
-  font-size: smaller;
+.recharts-text{
+  font-size: 0.8rem;
 }
 
 /* -- EVENT LIST -- */

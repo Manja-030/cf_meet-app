@@ -31,7 +31,7 @@ const EventGenre = ({ events }) => {
           cy="50%"
           labelLine={false}
           innerRadius={60}
-          outerRadius={100}
+          outerRadius={90}
           fill="#8884d8"
           dataKey="value"
           label={({ name, percent }) => {
