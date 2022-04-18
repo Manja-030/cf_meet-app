@@ -138,10 +138,13 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 0.9rem;
+ 
  
  
   /*min-width: 100%;*/
 }
+
 /*.recharts-responsive-container {
   min-width: 100%;
   display: flex;
@@ -158,9 +161,10 @@ input[type="number"] {
   background-color: var(--color-2);
   border: 1px solid var(--color-1);
 }
+/*
 .recharts-text{
   font-size: 0.8rem;
-}
+}*/
 
 /* -- EVENT LIST -- */
 
@@ -260,7 +264,10 @@ p {
   .number-city-container{
     flex-direction: row;
   }
- 
+  .data-vis-wrapper {
+		flex-direction: row;
+    font-size: 1rem;
+	}
 }
 
 @media only screen and (min-width: 769px) {
@@ -269,6 +276,7 @@ p {
   }
   .data-vis-wrapper {
 		flex-direction: row;
+    font-size: 1.2rem;
 	}
   .summary-wrapper {
     height: 3em;

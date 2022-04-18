@@ -133,6 +133,7 @@ class App extends Component {
             <EventGenre events={this.state.events} />
             <ResponsiveContainer height={300}>
               <ScatterChart
+                id="scatter-container"
                 margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
