@@ -133,6 +133,7 @@ input[type="number"] {
   color: var(--color-1);
   font-size: 1.3rem;
   font-weight: bold;
+  margin-top: 5px;
 }
 .data-vis-wrapper {
   display: flex;
@@ -259,27 +260,27 @@ p {
     grid-template-columns: 1fr 1fr;
   }
   .summary-wrapper {
-    height: 3em;
+    height: 3.1rem;
   }
   .number-city-container{
     flex-direction: row;
   }
   .data-vis-wrapper {
-		flex-direction: row;
+		/*flex-direction: row;*/
     font-size: 1rem;
 	}
 }
 
 @media only screen and (min-width: 769px) {
   .EventList {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .data-vis-wrapper {
 		flex-direction: row;
     font-size: 1.2rem;
 	}
   .summary-wrapper {
-    height: 3em;
+    height: 3.1rem;
   }
   .number-city-container{
     flex-direction: row;
