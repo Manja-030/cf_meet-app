@@ -150,11 +150,10 @@ input[type="number"] {
   min-width: 100%;
   display: flex;
 }*/
-.recharts-surface {
-  overflow: visible;
-}
+
 #scatter-container {
-  margin-left: -10vw;
+  margin-left: -5vw;
+  overflow: auto;
 }
 
 .recharts-default-tooltip {
@@ -279,6 +278,11 @@ p {
 		flex-direction: row;
     font-size: 1.2rem;
 	}
+  .data-vis-wrapper .recharts-responsive-container {
+    flex-basis: 50%;
+    max-width: 50%;
+    min-width: auto;
+  }
   .summary-wrapper {
     height: 3.1rem;
   }
@@ -330,7 +334,7 @@ p {
 
 .button-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   padding: 20px;
   font-family: sans-serif;
