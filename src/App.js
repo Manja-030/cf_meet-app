@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import './App.css';
 import './nprogress.css';
-import meet_logo2 from './assets/meet_logo2.jpg';
+import meet_logo3 from './assets/meet_logo3.jpg';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
@@ -100,7 +100,7 @@ class App extends Component {
       <div className="App">
         <div className="header">
           <img
-            src={meet_logo2}
+            src={meet_logo3}
             className="meet-logo responsive"
             alt="meet-logo"
           ></img>
