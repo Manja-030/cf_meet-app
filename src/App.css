@@ -29,7 +29,8 @@
 .header{
   width: 100%;
   background: rgb(32,64,81);
-  background: radial-gradient(circle, rgba(32,64,81,1) 0%, rgba(59,105,120,1) 100%);
+  background: linear-gradient(#3B6978 0%, #204051, #204051, #204051, #3B6978);
+  /*background: radial-gradient(circle, rgba(32,64,81,1) 0%, rgba(59,105,120,1) 100%);*/
   /*background-color: var(--color-1);*/
   /*background-image: linear-gradient( rgba(132, 169, 172, 1),rgba(32, 64, 81, 1));*/
 }
