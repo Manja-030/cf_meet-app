@@ -92,4 +92,10 @@ b{
 
 a {
   margin-top: 10px auto;
+  color: white;
+  background-color: #204051;
+}
+
+a:hover, a:selected{
+  color: #84A9AC;
 }
