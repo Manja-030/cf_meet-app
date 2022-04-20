@@ -37,7 +37,8 @@
 .meet-logo{
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  /*max-width: 100%;*/
+
 }
 .welcome-message{
   color: var(--color-1);
