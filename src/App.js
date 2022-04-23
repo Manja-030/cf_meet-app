@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import './App.css';
 import './nprogress.css';
-import meet_logo4 from './assets/meet_logo3.jpg';
+import meet_logo4 from './assets/meet_logo4.jpg';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';

@@ -157,7 +157,6 @@ input[type="number"] {
 }*/
 
 #scatter-container {
-  margin-left: -2vw;
   overflow: auto;
 }
 
