@@ -144,7 +144,7 @@ class App extends Component {
                   name="number of events"
                   allowDecimals={false}
                 />
-                <Tooltip label={''} cursor={{ strokeDasharray: '3 3' }} />
+                <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                 <Scatter data={this.getData()} fill="#3B6978" />
               </ScatterChart>
             </ResponsiveContainer>
