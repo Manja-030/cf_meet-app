@@ -263,9 +263,10 @@ p {
   .EventList {
     grid-template-columns: 1fr 1fr;
   }
+  /*
   .summary-wrapper {
     height: 3.1rem;
-  }
+  }*/
   .number-city-container{
     flex-direction: row;
   }
@@ -289,9 +290,9 @@ p {
     max-width: 50%;
     min-width: auto;
   }
-  .summary-wrapper {
+  /*.summary-wrapper {
     height: 3.1rem;
-  }
+  }*/
   .number-city-container{
     flex-direction: row;
   }
