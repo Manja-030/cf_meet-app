@@ -259,7 +259,7 @@ p {
 /* -- MEDIA QUERIES -- */
 
 
-@media only screen and (min-width: 483px) and (max-width: 595px) {
+@media only screen and (min-width: 483px) and (max-width: 724px) {
   .EventList {
     grid-template-columns: 1fr 1fr;
   }
@@ -291,7 +291,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 596px) {
+@media only screen and (min-width: 725px) {
   .EventList {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20px;
