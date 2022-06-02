@@ -259,7 +259,7 @@ p {
 /* -- MEDIA QUERIES -- */
 
 
-@media only screen and (min-width: 425px) and (max-width: 595px) {
+@media only screen and (min-width: 430px) and (max-width: 595px) {
   .EventList {
     grid-template-columns: 1fr 1fr;
   }
