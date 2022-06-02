@@ -259,7 +259,7 @@ p {
 /* -- MEDIA QUERIES -- */
 
 
-@media only screen and (min-width: 480px) and (max-width: 595px) {
+@media only screen and (min-width: 483px) and (max-width: 595px) {
   .EventList {
     grid-template-columns: 1fr 1fr;
   }
@@ -275,10 +275,16 @@ p {
     font-size: 1rem;
 	}
   h2{
-    font-size: 1.4em;
+    font-size: 1.3em;
+    height: 2.6em;
   }
-  .start-time, .event-location{
+  .start-time{
     font-size: 0.9em;
+    margin-top: 8px;
+  }
+  .event-location{
+    font-size: 0.9em;
+    height: 1.8em;
   }
   .calendar-link, description{
     font-size: 0.8em;
