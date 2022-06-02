@@ -36,8 +36,7 @@ const EventGenre = ({ events }) => {
           dataKey="value"
           label={({ name, percent }) => {
             if (percent > 0) {
-              return `${name} {\n}
-              ${(percent * 100).toFixed(0)}%`;
+              return `${name}\n${(percent * 100).toFixed(0)}%`;
             }
           }}
         >
