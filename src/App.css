@@ -311,6 +311,21 @@ p {
   .number-city-container{
     flex-direction: row;
   }
+  h2{
+    font-size: 1.3em;
+    height: 2.6em;
+  }
+  .start-time{
+    font-size: 0.9em;
+    margin-top: 8px;
+  }
+  .event-location{
+    font-size: 0.9em;
+    height: 1.8em;
+  }
+  .calendar-link, description{
+    font-size: 0.8em;
+  }
 } 
 /*
 @media only screen and (min-width: 992px) {
