@@ -23,6 +23,7 @@ class CitySearch extends Component {
     } else {
       return this.setState({
         query: value,
+        shoSuggestions: true,
         suggestions,
         infoText: '',
       });
