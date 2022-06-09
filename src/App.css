@@ -28,7 +28,7 @@
 /* -- HEADING -- */
 .header{
   width: 100%;
-  height: 8vh;
+  height: 10vh;
   background: rgb(32,64,81);
   background: linear-gradient(to right, #3B6978 0%, #204051, #204051, #204051, #3B6978);
   /*background: radial-gradient(circle, rgba(32,64,81,1) 0%, rgba(59,105,120,1) 100%);*/
