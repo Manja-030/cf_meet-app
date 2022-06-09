@@ -166,7 +166,7 @@ input[type="number"] {
   overflow: auto;
 }
 
-.recharts-default-tooltip {
+.tooltip {
   padding: 5px;
   background-color: var(--color-2);
   border: 1px solid var(--color-1);
