@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/cf_meet-app/static/css/main.df8dc6ac.css",
+    "main.css": "/cf_meet-app/static/css/main.a17cbce9.css",
     "main.js": "/cf_meet-app/static/js/main.f33d8cd2.js",
     "static/js/377.c6d568f6.chunk.js": "/cf_meet-app/static/js/377.c6d568f6.chunk.js",
     "static/media/welcome_wallpaper.jpg": "/cf_meet-app/static/media/welcome_wallpaper.f75ef7f13367397798ab.jpg",
     "static/media/meet_logo.png": "/cf_meet-app/static/media/meet_logo.efbe8f6d77c7e725ad57.png",
     "service-worker.js": "/cf_meet-app/service-worker.js",
     "index.html": "/cf_meet-app/index.html",
-    "main.df8dc6ac.css.map": "/cf_meet-app/static/css/main.df8dc6ac.css.map",
+    "main.a17cbce9.css.map": "/cf_meet-app/static/css/main.a17cbce9.css.map",
     "main.f33d8cd2.js.map": "/cf_meet-app/static/js/main.f33d8cd2.js.map",
     "377.c6d568f6.chunk.js.map": "/cf_meet-app/static/js/377.c6d568f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df8dc6ac.css",
+    "static/css/main.a17cbce9.css",
     "static/js/main.f33d8cd2.js"
   ]
 }
