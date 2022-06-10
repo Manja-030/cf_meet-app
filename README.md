@@ -102,3 +102,4 @@ THEN the user will see charts visualizing the kind and number of events in that 
 - npm run start
 
 ## Demo
+![app_demo](https://user-images.githubusercontent.com/80778632/173055674-a8b9c537-3669-4b37-bbf5-73e1c7645773.gif)
