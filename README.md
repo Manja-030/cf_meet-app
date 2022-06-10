@@ -1,6 +1,7 @@
 # CF_meet-app Meet Application
 
 This is a serverless, progressive web application (PWA) built with React. The application uses the Google Calendar API to fetch events for a given city the user can specify.
+<img width="1418" alt="screenshot_meet_app" src="https://user-images.githubusercontent.com/80778632/173056309-f32e6937-1596-4634-bf44-be74099ccb47.png">
 
 ## Features
 - Filter events by city.
@@ -102,3 +103,4 @@ THEN the user will see charts visualizing the kind and number of events in that 
 - npm run start
 
 ## Demo
+![app_demo](https://user-images.githubusercontent.com/80778632/173055674-a8b9c537-3669-4b37-bbf5-73e1c7645773.gif)
