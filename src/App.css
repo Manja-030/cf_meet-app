@@ -1,38 +1,284 @@
-.App {
+/* -- GENERAL -- */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+:root {
+  --color-1: #204051;
+  --color-2: #E4E3E3;
+  --color-3: #3B6978;
+  --color-4: #84A9AC;
+  --color-5: #bcdcdb;
+  --color-6: #FABB51;
+  
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-2);
+}
+
+/* -- HEADING -- */
+.header{
+  width: 100%;
+  height: 10vh;
+  background: rgb(32,64,81);
+  background: linear-gradient(to right, #3B6978 0%, #204051, #204051, #204051, #3B6978);
+}
+.meet-logo{
+  display: block;
+  margin: auto;
+  height: 100%;
+  width: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--color-1);
+}
+.welcome-message{
+  color: var(--color-1);
   text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* -- Search SECTION --  */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.number-city-wrapper{
+  padding-top: 20px;
+	margin-left: 30px;
+	margin-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center; 
+  
+}
+
+.CitySearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  padding: 10px;
+ 
+}
+
+.city-input {
+  width: 250px;
+  color: var(--color-1);
+}
+
+.NumberOfEvents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  padding: 10px;
+}
+input[type="text"],
+input[type="number"] {
+  padding: 8px 6px 8px 10px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+}
+
+.suggestions {
+  list-style: none;
+  width: 250px;
+  margin: 0;
+  top: 70px;
+  font-size: 1.2rem;
+  box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  z-index: 1;
+}
+
+.suggestions li {
+  text-align: left;
+  padding: 8px 6px 8px 10px;
+  background-color: var(--color-4);
+  cursor: default;
+}
+
+.suggestions > li:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  
+}
+
+.suggestions > li:hover {
+  background-color: var(--color-5);
+}
+
+/* -- DATA VISUALIZATION SECTION -- */
+
+.data-vis-section{
+  border: 2px dashed var(--color-1);
+  margin: 10px;
+}
+.data-vis-title{
+  text-align: center;
+  color: var(--color-1);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.data-vis-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+#scatter-container {
+  overflow: auto;
+}
+
+
+/* -- EVENT LIST -- */
+
+.EventList {
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr;
+  margin: 0px;
+  padding: 10px;
+  justify-content: space-evenly;
+  grid-gap: 20px;
+}
+
+.event {
+  padding: 15px;
+  background-color: var(--color-1) !important;
   color: white;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  margin: 5px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.summary-wrapper {
+  background-color: var(--color-1);
+}
+
+.summary{
+  white-space: pre-wrap;
+}
+.event-text {
+  background-color: var(--color-1) !important;
+}
+
+.details-btn {
+  right: 5px;
+  bottom: 5px;
+  padding: 5px 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--color-4);
+  color: white;
+  border-color: var(--color-3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar-link{
+  background-color: var(--color-1);
+  color: var(--color-6);
+}
+
+.description{
+  font-size: smaller;
+  overflow-x: hidden;
+}
+
+.time-location-wrapper{
+  margin-top: 3 px;
+  background-color: var(--color-1);
+}
+
+ #time-icon, #location-icon{
+  background-color: var(--color-1) !important;
+ } 
+
+/* -- ALERTS -- */
+
+.Alert {
+  height: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.offline-warning{
+  text-align:center;
+  margin-top: 1.5rem;
+}
+
+/* -- MEDIA QUERIES -- */
+
+
+@media only screen and (min-width: 483px) and (max-width: 724px) {
+  .EventList {
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  .number-city-container{
+    flex-direction: row;
+  }
+  .data-vis-wrapper {
+    font-size: 1rem;
+	}
+  h2{
+    font-size: 1.3em;
+    height: 2.6em;
+  }
+  .start-time{
+    font-size: 0.9em;
+    margin-top: 8px;
+  }
+  .event-location{
+    font-size: 0.9em;
+    height: 1.8em;
+  }
+  .calendar-link, description{
+    font-size: 0.8em;
   }
 }
+
+@media only screen and (min-width: 725px) {
+  .EventList {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .data-vis-wrapper {
+		flex-direction: row;
+    font-size: 1.2rem;
+	}
+  .data-vis-wrapper .recharts-responsive-container {
+    flex-basis: 50%;
+    max-width: 50%;
+    min-width: auto;
+  }
+  .number-city-container{
+    flex-direction: row;
+  }
+  h2{
+    font-size: 1.3em;
+    height: 2.6em;
+  }
+  .start-time{
+    font-size: 0.9em;
+    margin-top: 8px;
+  }
+  .event-location{
+    font-size: 0.9em;
+    height: 1.8em;
+  }
+  .calendar-link, description{
+    font-size: 0.8em;
+  }
+} 
