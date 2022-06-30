@@ -101,24 +101,24 @@ THEN the user will see charts visualizing the kind and number of events in that 
 
 The easiest way to get started is to clone the repository:
 
-# Clone the repository
+### Clone the repository
 ```
 git clone https://github.com/Manja-030/cf_meet-app.git
 ```
 
-# Change directory
+### Change directory
 
 ```
 cd cf_meet-app
 ```
 
-# Install NPM dependencies
+### Install NPM dependencies
 
 ```
 npm install
 ```
 
-# Start the server
+### Start the server
 
 ```
 npm run start
