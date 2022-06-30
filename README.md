@@ -124,6 +124,12 @@ npm install
 npm run start
 ```
 
+### Build and deploy the app to gh-pages
+
+```
+npm run deploy
+```
+
 
 ## Demo
 ![app_demo](https://user-images.githubusercontent.com/80778632/173055674-a8b9c537-3669-4b37-bbf5-73e1c7645773.gif)
